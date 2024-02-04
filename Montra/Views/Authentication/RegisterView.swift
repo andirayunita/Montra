@@ -34,24 +34,24 @@ struct RegisterView: View {
                 InputField(text: $email, placeholder: "Email")
                 InputField(text: $password, placeholder: "Password", isSecured: true, isPassField: true)
                 
-                Button {
-                    acceptTerms.toggle()
-                } label: {
-                    HStack(spacing: 8) {
-                        Image(systemName: acceptTerms ? "checkmark.square.fill" : "square")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .foregroundStyle(.violet100)
-                        Text("By signing up, you agree to the \(terms)")
-                            .font(.custom("Inter", size: 14))
-                            .foregroundStyle(.dark50)
-                            .multilineTextAlignment(.leading)
-                    }
-                    .padding(.horizontal, 20)
+                HStack(spacing: 8) {
+                    Image(systemName: acceptTerms ? "checkmark.square.fill" : "square")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                        .foregroundStyle(.violet100)
+                        .onTapGesture {
+                            acceptTerms.toggle()
+                        }
+                    
+                    Text("By signing up, you agree to the \(terms)")
+                        .font(.custom("Inter", size: 14))
+                        .foregroundStyle(.dark50)
+                        .multilineTextAlignment(.leading)
                 }
+                .padding(.horizontal, 20)
                 
                 VStack(spacing: 12) {
-                    NavigationLink(destination: HomepageView(userData: userData)) {
+                    NavigationLink(destination: HomepageView()) {
                         CustomLongButton(title: "Sign Up", titleColor: .white, bgButtonColor: .violet100)
                     }
                     Text("Or with")
@@ -59,6 +59,11 @@ struct RegisterView: View {
                         .foregroundStyle(.light20)
                     
                     CustomLongButton(title: "Sign Up with Google", titleColor: .dark50, bgButtonColor: .white, isWithOtherApp: true, iconLogo: "ic_google")
+                        .onTapGesture {
+                            if let url = URL(string: "https://www.google.com") {
+                                UIApplication.shared.open(url)
+                            }
+                        }
                 }
                 
                 NavigationLink(destination: LoginView()) {

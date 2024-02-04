@@ -12,6 +12,11 @@
 		5E06BA672B67D6030001704B /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E06BA662B67D6030001704B /* InputField.swift */; };
 		5E06BA6A2B67DD520001704B /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E06BA692B67DD520001704B /* HomepageView.swift */; };
 		5E06BA6C2B67EDCE0001704B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E06BA6B2B67EDCE0001704B /* User.swift */; };
+		5E43BB8E2B6F86B40072EFA9 /* MontraTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E43BB8D2B6F86B40072EFA9 /* MontraTabView.swift */; };
+		5E43BB902B6FA44A0072EFA9 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E43BB8F2B6FA44A0072EFA9 /* RowView.swift */; };
+		5E43BB922B6FB9E40072EFA9 /* TransactionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E43BB912B6FB9E40072EFA9 /* TransactionCard.swift */; };
+		5E43BB942B6FF0470072EFA9 /* SuccessPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E43BB932B6FF0470072EFA9 /* SuccessPageView.swift */; };
+		5E43BB962B7000940072EFA9 /* CustomTabBarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E43BB952B7000940072EFA9 /* CustomTabBarShape.swift */; };
 		5EB5581E2B6276EC0029991D /* MontraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5581D2B6276EC0029991D /* MontraApp.swift */; };
 		5EB558202B6276EC0029991D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5581F2B6276EC0029991D /* ContentView.swift */; };
 		5EB558222B6276EE0029991D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB558212B6276EE0029991D /* Assets.xcassets */; };
@@ -47,6 +52,11 @@
 		5E06BA662B67D6030001704B /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		5E06BA692B67DD520001704B /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
 		5E06BA6B2B67EDCE0001704B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5E43BB8D2B6F86B40072EFA9 /* MontraTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontraTabView.swift; sourceTree = "<group>"; };
+		5E43BB8F2B6FA44A0072EFA9 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		5E43BB912B6FB9E40072EFA9 /* TransactionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCard.swift; sourceTree = "<group>"; };
+		5E43BB932B6FF0470072EFA9 /* SuccessPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPageView.swift; sourceTree = "<group>"; };
+		5E43BB952B7000940072EFA9 /* CustomTabBarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarShape.swift; sourceTree = "<group>"; };
 		5EB5581A2B6276EC0029991D /* Montra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Montra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB5581D2B6276EC0029991D /* MontraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontraApp.swift; sourceTree = "<group>"; };
 		5EB5581F2B6276EC0029991D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +115,14 @@
 				5E06BA692B67DD520001704B /* HomepageView.swift */,
 			);
 			path = Homepage;
+			sourceTree = "<group>";
+		};
+		5E43BB8C2B6F86A60072EFA9 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				5E43BB8D2B6F86B40072EFA9 /* MontraTabView.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		5EB558112B6276EC0029991D = {
@@ -200,6 +218,7 @@
 		5EB558492B6288320029991D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E43BB8C2B6F86A60072EFA9 /* Tab */,
 				5E06BA612B67C8560001704B /* Authentication */,
 				5ED624F32B68244400DEFBA3 /* Budget */,
 				5E06BA682B67DD420001704B /* Homepage */,
@@ -225,7 +244,11 @@
 			children = (
 				5EB558502B628FE50029991D /* CustomDotIndicator.swift */,
 				5EB558522B6295190029991D /* CustomLongButton.swift */,
+				5E43BB952B7000940072EFA9 /* CustomTabBarShape.swift */,
 				5E06BA662B67D6030001704B /* InputField.swift */,
+				5E43BB8F2B6FA44A0072EFA9 /* RowView.swift */,
+				5E43BB932B6FF0470072EFA9 /* SuccessPageView.swift */,
+				5E43BB912B6FB9E40072EFA9 /* TransactionCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,20 +370,25 @@
 				5EB558482B6285A70029991D /* Onboarding.swift in Sources */,
 				5ED624EF2B681C0600DEFBA3 /* ForgotPasswordView.swift in Sources */,
 				5EB5584B2B6288490029991D /* OnboardingSingleView.swift in Sources */,
+				5E43BB8E2B6F86B40072EFA9 /* MontraTabView.swift in Sources */,
 				5EB558582B62BE620029991D /* NewOnboardingSingleView.swift in Sources */,
 				5ED624F82B68247200DEFBA3 /* TransactionView.swift in Sources */,
 				5EB558512B628FE50029991D /* CustomDotIndicator.swift in Sources */,
 				5EB558532B6295190029991D /* CustomLongButton.swift in Sources */,
+				5E43BB942B6FF0470072EFA9 /* SuccessPageView.swift in Sources */,
 				5E06BA652B67C8800001704B /* LoginView.swift in Sources */,
+				5E43BB962B7000940072EFA9 /* CustomTabBarShape.swift in Sources */,
 				5ED624FA2B68248300DEFBA3 /* BudgetView.swift in Sources */,
 				5E06BA672B67D6030001704B /* InputField.swift in Sources */,
 				5E06BA6C2B67EDCE0001704B /* User.swift in Sources */,
 				5ED624F62B68246200DEFBA3 /* ProfileView.swift in Sources */,
 				5EB558202B6276EC0029991D /* ContentView.swift in Sources */,
+				5E43BB922B6FB9E40072EFA9 /* TransactionCard.swift in Sources */,
 				5EB5584E2B628C390029991D /* OnboardingView.swift in Sources */,
 				5EB5585C2B62BFB40029991D /* NewOnboarding.swift in Sources */,
 				5EB5581E2B6276EC0029991D /* MontraApp.swift in Sources */,
 				5E06BA6A2B67DD520001704B /* HomepageView.swift in Sources */,
+				5E43BB902B6FA44A0072EFA9 /* RowView.swift in Sources */,
 				5EB5585A2B62BF950029991D /* NewOnboardingView.swift in Sources */,
 				5ED624F12B681C1C00DEFBA3 /* ResetPasswordView.swift in Sources */,
 			);

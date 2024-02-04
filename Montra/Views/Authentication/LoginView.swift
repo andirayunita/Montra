@@ -23,7 +23,7 @@ struct LoginView: View {
                 InputField(text: $email, placeholder: "Email")
                 InputField(text: $password, placeholder: "Password", isSecured: true, isPassField: true)
                 
-                NavigationLink(destination: HomepageView(userData: userData)) {
+                NavigationLink(destination: MontraTabView()) {
                     CustomLongButton(title: "Login", titleColor: .white, bgButtonColor: .violet100)
                         .padding(.top, 16)
                 }
